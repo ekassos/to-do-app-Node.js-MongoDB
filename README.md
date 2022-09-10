@@ -27,6 +27,6 @@ The code for this project is adapted from fawwaz37's [ToDo List App](https://git
 1. Updated language throughout the app for clarity.
 
 ## Reflection
-> What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?
+> _What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?_
 
 The main significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not is database management. Here, storing details was much easier, and this allowed for a much simpler login/logout feature set. Moreover, this feature set was somewhat needed, as we were implementing a remote database and not using localStorage anymore. Of course, moving from one page to the other was handled significantly differently and it was a much more time-consuming process to set up the server-side functions. However, once everything was set, it was very easy to program. 
