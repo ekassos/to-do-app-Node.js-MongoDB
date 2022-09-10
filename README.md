@@ -1,20 +1,21 @@
 # To-do App with Node.js and MongoDB
 
-$\textcolor{Yellow}{\textbf{\emph{In progress:}}} \text{\emph{ Friday, Sep 9, 2022}}$
+$\textcolor{ForestGreen}{\textbf{\emph{Completed:}}} \text{\emph{ Friday, Sep 9, 2022}}$
 
 ## Live Demo
-You can access a working version of the project [TBD](#live-demo).
+You can access a working version of the project [here](https://todo-app-week2-evangelos.herokuapp.com).
 
 ## Code Source 
-The code for this project is adapted from CodingNepal's [Create A Todo List App in HTML CSS & JavaScript](https://www.codingnepalweb.com/create-todo-list-app-html-javascript/) tutorial, with a few additions as noted in the [Improvements section](#improvements) below.
+The code for this project is adapted from fawwaz37's [ToDo List App](https://github.com/fawwaz37/todo-express-mongodb) tutorial, with many additions as noted in the [Improvements section](#improvements) below.
 
 ## Features  
-- Type a task in the text box and press the "Enter" key or the "Submit" button to register it to local storage. The task persists when the browser tab is refreshed or reopened later (using localStorage in JS).
-- When you have some tasks to work over, you can click on their text or the checkmark on the left of each item to mark them as completed. 
-- To distinguish between completed and pending tasks, use the three tabs ("All," "Pending," "Completed") to navigate to the right tab.
-- Made a mistake? Click on the three dots on the right of each task and select "Edit." You can now edit the text of the task in the text box. Submit your correction with the "Enter" key or the "Submit" button.
-- You can also delete all tasks by clicking on the three dots on the right of each task and selecting "Delete." 
-- Done for the day or need a fresh start? Click "Clear All" to remove all (pending and completed) tasks.
+- After navigating to the main page, click "Get started" to land on the Login page.
+- You can either click "Register" to create a new profile or use the following details to log-in: email: `example@email.com`, password: `password` (please disregard the obvious security flaws here).
+- Once logged in, you will be redirected to the main app page. If there are no tasks, you can click "Add Task" to create one.
+- Type a task in the "Title" text box and a short/long description in the "Description" text box. Press the "Submit" button to register it. The task persists when the browser tab is refreshed or reopened later (using MongoDB).
+- When you have some tasks to work over, you can click on the "Mark as Completed" button to mark them as completed. 
+- Made a mistake? Click on the "Edit Task" button on the bottom of each item box. You can now edit the text of the task title and description in the text box. Submit your correction with the "Submit" button.
+- Done with the app or never want to track tasks again? Click "Delete your account" in the navigation bar. You can also log out instead for a milder disassotiation you can reverse.
 
 ## Improvements  
 > *These improvements are referenced throught the project files using the numbers shown below, e.g. Improvement (5).*
