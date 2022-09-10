@@ -1,14 +1,9 @@
-# To-do App with HTML, CSS, and JS
+# To-do App with Node.js and MongoDB
 
-$\textcolor{ForestGreen}{\textbf{\emph{Completed:}}} \text{\emph{ Friday, Sep 2, 2022}}$
+$\textcolor{Yellow}{\textbf{\emph{In progress:}}} \text{\emph{ Friday, Sep 9, 2022}}$
 
 ## Live Demo
-You can access a working version of the project [here](https://to-do-app-html-i4c0wuvut-ekassos.vercel.app/).
-
-> **Note**  
-> If you are accessing the live demo using Safari (*tested on Release Version 16.1 and Technology Preview Release 152 with Safari 16.0 and WebKit 18615.1.2.3*), the checkmark in the task name input box might not turn darker as you type. This is a browser CSS-stylebook compatability issue, and the feature works as expected in Chromium browsers (Chrome, Brave, etc.), Firefox and the like. Still, the to-do app should not suffer in functionality because of this issue.  
-> 
-> A WhichBrowser plugin patch to detect the browser client and replace the image accordingly seemed like an overkill for this project. If you are facing these issues, you can clone the repository and use [Visual Studio Code](https://code.visualstudio.com) and the [Live Preview extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) to view the project correctly locally.
+You can access a working version of the project [TBD](#live-demo).
 
 ## Code Source 
 The code for this project is adapted from CodingNepal's [Create A Todo List App in HTML CSS & JavaScript](https://www.codingnepalweb.com/create-todo-list-app-html-javascript/) tutorial, with a few additions as noted in the [Improvements section](#improvements) below.
