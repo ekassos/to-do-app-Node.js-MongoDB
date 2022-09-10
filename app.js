@@ -30,9 +30,11 @@ require('./controllers/config')(passport);
 
 app.use(flash());
 
+// What content files to use
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
+// main details for redirect
 app.get('/', (req, res) => {
     let title = 'To-Do App'
     res.render('index', {

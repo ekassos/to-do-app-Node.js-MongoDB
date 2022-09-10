@@ -4,14 +4,19 @@
                 {{message}}
             </div>
         {{/if}}
+  <!-- Improvement (6): Imporve Language !-->
   <h3>Create a new to-do item</h3>
   <form action="/todo" method="post">
     <div class="form-group">
       <label for="title">Title</label>
+      <!-- Improvement (6): Imporve Language !-->
       <input class="form-control" name="title" type="text" placeholder="What are we tackling today?" required>
     </div>
     <div class="form-group">
+      <!-- Improvement (3) !-->
+      <!-- Improvement (6): Imporve Language !-->
       <label for="description">Description</label>
+      <!-- Improvement (6): Imporve Language !-->
       <textarea class="form-control" name="description" placeholder="Enter any detailed information here." required></textarea>
     </div>
     <button type="submit" class="btn btn-dark">Submit</button>

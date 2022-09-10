@@ -5,11 +5,13 @@ const passport = require('passport');
 const { registerUser, deleteUserAccount } = require('../controllers/user')
 const { notAuthenticated } = require('../controllers/auth')
 
+// Register page redirect
 router.get('/register', notAuthenticated, (req, res) => {
     res.render('register');
 });
 router.post('/register', registerUser)
 
+// Login page redirect
 router.get('/login', notAuthenticated, (req, res) => {
     res.render('login')
 })
@@ -22,11 +24,13 @@ router.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
+// Logout page redirect
 router.get('/logout', (req,res) => {
     req.logout();
     res.redirect('/users/login');
 });
 
+// Delete page redirect
 router.get('/delete', (req, res) => {
     res.render('delete')
 })

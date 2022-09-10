@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// MongoDb database fields
 const Users = mongoose.Schema({
     name: { type: String },
     email: { type: String},

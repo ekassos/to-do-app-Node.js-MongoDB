@@ -1,3 +1,4 @@
+<!-- Improvement (5) !-->
 <div class="row">
   <div class="col-md-10">
     <h2>Task List:</h2>
@@ -13,17 +14,21 @@
     {{#each todos}}
         <div class="card card-body mb-2">
             <h4>{{title}}</h4>
+            <!-- Improvement (6): Imporve Language !-->
             <p class="textareadescript">Task description:<br>
             {{description}}</p>
             <p>Creation date: {{time}}</p>
             <form action="/todo/delete" method="POST">
                 <a class="btn btn-dark mb-2" href="/todo/edit/{{_id}}/{{title}}/{{description}}">Edit Task</a>
                 <input type="hidden" value="{{_id}}" name="id">
+                <!-- Improvement (1) !-->
+                <!-- Improvement (6): Imporve Language !-->
                 <button class="btn btn-success mb-2" type="submit">Mark as Complete</button>
             </form>
         </div>
     {{/each}}
     </ul>
 {{else}}
+    <!-- Improvement (6): Imporve Language !-->
     <h3>You haven't created any tasks yet! Get started by clicking the button above!</h3>
 {{/if}}

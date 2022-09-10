@@ -5,6 +5,7 @@ const { isAuthenticated } = require('../controllers/auth')
 const { getTodoAll } = require('../mongodb/db')
 const { addTodoUser, deleteTodoUser, editTodoUser } = require('../controllers/user')
 
+// where should the user be redirected when accessing the main page
 router.get('/', isAuthenticated, async(req, res) => {
     let db = await getTodoAll(req.user.id)
     if (db) {
@@ -17,12 +18,16 @@ router.get('/', isAuthenticated, async(req, res) => {
 })
 router.post('/', isAuthenticated, addTodoUser)
 
+// Add page redirect
 router.get('/add', isAuthenticated, (req,res) => {
     res.render('todo/add'); 
 });
 
+// Delete page redirect
 router.post('/delete', isAuthenticated, deleteTodoUser)
 
+// Edit page redirect
+// Improvement (2)
 router.get('/edit/:id/:title/:description', isAuthenticated, (req,res) => {
     res.render('todo/edit', {
         _id: req.params.id,

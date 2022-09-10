@@ -12,6 +12,7 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.createUser = createUser
 
+    // is email in database?
     async function checkEmail(email) {
         let users = await User.findOne({email: email})
         if(users !== null) {
@@ -23,6 +24,7 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.checkEmail = checkEmail
 
+    // is user entering the right email/password combo?
     async function checkAuth(email, pass) {
         let users = await User.findOne({email: email})
         if (email === users.email && pass === users.password) {
@@ -33,6 +35,7 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.checkAuth = checkAuth
 
+    // delete user based on their ID
     async function deleteUser(id) {
         User.deleteOne({_id: id}, function(err, obj) {
             if (err) throw err;
@@ -40,6 +43,7 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.deleteUser = deleteUser
 
+    // search and find all user's tasks based on their id
     async function getTodoAll(id) {
         let users = await User.findOne({_id: id}).lean()
         let db = users.todo
@@ -51,6 +55,7 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.getTodoAll = getTodoAll
 
+    // create new todo item
     async function createTodo(id, title, description) {
         const time = moment(Date.now()).format('DD/MM HH:mm:ss')
         let users = await User.findOne({_id: id})
@@ -63,6 +68,7 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.createTodo = createTodo
 
+    // mark existing todo item as complete (i.e. delete said item)
     async function deleteTodo(id, idTodo) {
         let users = await User.findOne({_id: id})
         let arr = users.todo
@@ -73,6 +79,8 @@ moment.tz.setDefault(timezn).locale('id')
     }
     module.exports.deleteTodo = deleteTodo
 
+
+    // edit existing todo item
     async function editTodo(id, idTodo, title, description) {
         let users = await User.findOne({_id: id})
         let arr = users.todo

@@ -19,8 +19,14 @@ The code for this project is adapted from fawwaz37's [ToDo List App](https://git
 
 ## Improvements  
 > *These improvements are referenced throught the project files using the numbers shown below, e.g. Improvement (5).*
-1. A Submit button that works alongside the tutorial's functionality of pressing "Enter" to submit an item (added a second method to capture a wider range of how a user might choose to interact with the app).
-2. A strike-through line appears over a submitted task when the user hovers over the task's text to signify that clicking on the text will mark a task as completed and aid in functionality discovery.
-3. An updated "Mark Task as Completed" function that updates the view instantly. In the tutorial's version, if a user crossed out a task in the "Pending" tab, they would need to navigate to another tab and return for the completed task to be removed from the list.
-4. Added cues to whether the Submit button can be used (high opacity when task item textbox is empty), with matching checkmark icon behavior.
-5. Fixed code support for handling and editing tasks with special characters by using the `encodeURI()` and `decodeURI()` functions.
+1. A "Mark as Complete" instead of a "Delete Task" button.
+1. An Edit Task page and corresponding functions that transfer the current values of the task into the view, so editing is easier for the user. This required extensive code editing to allow the forwarding URL to contain the necessary information.
+1. An updated Add Task and Edit Task page that includes a larger textarea for the description.
+1. An updated color palette for the whole app.
+1. An updated placement of the "Add Task" button that leverages custom CSS placement methods form the imported Bootstrap CSS stylesheet.
+1. Updated language throughout the app for clarity.
+
+## Reflection
+> What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?
+
+The main significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not is database management. Here, storing details was much easier, and this allowed for a much simpler login/logout feature set. Moreover, this feature set was somewhat needed, as we were implementing a remote database and not using localStorage anymore. Of course, moving from one page to the other was handled significantly differently and it was a much more time-consuming process to set up the server-side functions. However, once everything was set, it was very easy to program. 

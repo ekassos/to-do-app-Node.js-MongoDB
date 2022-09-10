@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const settings = require('../controllers/settings')
 
+// manage MongoDb connection
 function connectMongoDb() {
     mongoose.connect(settings.dbURI, { 
       useNewUrlParser: true, 
