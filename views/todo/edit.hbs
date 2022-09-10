@@ -1,0 +1,20 @@
+<div class="card card-body">
+        {{#if message}}
+            <div class="alert {{messageClass}}" role="alert">
+                {{message}}
+            </div>
+        {{/if}}
+  <h3>Edit your to-do item</h3>
+  <form action="/todo/edit" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" name="title" type="text" value="{{title}}" placeholder="What are we tackling today?" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" name="description" required>{{description}}</textarea>
+    </div>
+        <input type="hidden" value="{{_id}}" name="id">
+        <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>
